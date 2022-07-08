@@ -1,0 +1,109 @@
+
+
+:root{
+--White: hsl(0, 0%, 100%) ;
+--Orange: hsl(25, 97%, 53%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%); 
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'Overpass',
+    sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    
+}
+
+.container{
+    max-width: 550px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-Blue);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+h1{
+    color:var(--White);
+}
+
+p{
+    color: var(--Medium-Grey);
+    font-size: 15px;
+}
+
+.numbers{
+    background-color: var(--Medium-Grey);
+    border: none;
+    color: var(--White);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rating{
+    user-select: none;
+}
+
+.numbers:hover{
+    background-color: var(--Orange);
+}
+
+.btn{
+    padding: 10px 20px;
+    width: 300px;
+    margin-top: 25px;
+    cursor: pointer;
+    background-color:var(--Orange);
+    border: none;
+    border-radius: 35px;
+    color: var(--White);
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+.thankyou-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--Dark-Blue);
+    padding: 40px;
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 0.7s;
+}
+
+.active.thankyou-container{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.msg{
+    background-color: var(--Very-Dark-Blue);
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--Orange);
+    line-height: 5px;
+}
